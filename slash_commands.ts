@@ -6,9 +6,10 @@ const rest = new REST({ version: '10' }).setToken(TOKEN);
 
 const commands = [
   {
-    name: 'ping',
-    description: 'Replies with Pong!',
-  },
+    name: 'lfg',
+    description: 'Creates a group.',
+    
+  }
 ];
 export async function refreshCommands() {
   try {
