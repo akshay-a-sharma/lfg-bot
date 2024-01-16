@@ -134,7 +134,7 @@ function createPlayerList(
     .filter((e) => e.status !== "decline")
     .sort((a, b) => Number(b.status === "available") - Number(a.status === "available") || a.timestamp - b.timestamp);
   sortedPlayers = waitlist ? sortedPlayers.slice(5) : sortedPlayers.slice(0, 5);
-  return sortedPlayers.length === 0 ? "\U200B" : sortedPlayers.map((e) => `${statusToEmoji[e.status]} ${e.name}`).join("\n");
+  return sortedPlayers.length === 0 ? "\u200B" : sortedPlayers.map((e) => `${statusToEmoji[e.status]} ${e.name}`).join("\n");
 }
 
 function createPingList(players: Array<{ name: string; status: string; user: User; timestamp: number }>) {
