@@ -106,6 +106,10 @@ export async function lfgResponse(interaction: ChatInputCommandInteraction<Cache
           value: createPlayerList(players),
         },
       ];
+      if (event.customId === "decline")
+      {
+        
+      }
       if (players.filter((e) => e.status !== "decline").length > 5) {
         fields.push({
           name: `Waitlist`,
