@@ -73,7 +73,7 @@ export async function lfgResponse(interaction: ChatInputCommandInteraction<Cache
 
   const response = await interaction.reply(reply);
 
-  const collector = response.createMessageComponentCollector({ componentType: ComponentType.Button });
+  const collector = response.createMessageComponentCollector({ componentType: ComponentType.Button, time: 8.64e+7 });
 
   collector.on("collect", async (event) => {
     try {
@@ -155,7 +155,7 @@ export async function lfgResponse(interaction: ChatInputCommandInteraction<Cache
       console.log("Failed interaction?");
       console.log(e);
     }
-  });
+  }, );
 }
 
 function createPlayerList(
