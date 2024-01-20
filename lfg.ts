@@ -9,7 +9,7 @@ import {
   User,
 } from "discord.js";
 
-const statusToEmoji = { available: ":white_check_mark:", tentative: ":grey_question:", decline: "" };
+const statusToEmoji = { available: ":white_check_mark:", tentative: ":grey_question:", decline: ":no_entry:" };
 
 let canPing = true;
 
@@ -137,7 +137,7 @@ export async function lfgResponse(interaction: ChatInputCommandInteraction<Cache
       }
       if (players.filter((e) => e.status === "decline").length > 0)
       {
-        fields.push({name: "Declined :no_entry:", value: createDeclineList(players)})
+        fields.push({name: "Declined", value: createDeclineList(players)})
       }
       exampleEmbed.setFields(fields);
       if (shouldPing)
